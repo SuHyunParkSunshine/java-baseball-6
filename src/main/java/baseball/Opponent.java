@@ -4,15 +4,12 @@ import camp.nextstep.edu.missionutils.Randoms;
 
 import java.util.ArrayList;
 import java.util.List;
-import static baseball.Utils.*;
+import static baseball.utils.Constants.*;
 
-public class Oppoent {
-
-    private static final boolean VALID_SUCCESS = true;
-    private static final boolean VALID_FAILED = false;
+public class Opponent {
     List<Integer> randomNumbers;
 
-    public Oppoent() {}
+//    public Opponent() {}
 
     public void initialiser() {
         do{

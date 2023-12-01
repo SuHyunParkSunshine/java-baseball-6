@@ -1,6 +1,6 @@
 package baseball;
 
-import static baseball.Utils.*;
+import static baseball.utils.Constants.*;
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
 public class Controller {
@@ -9,8 +9,8 @@ public class Controller {
 
     public void gameStart(){
         String state = START_GAME;
-        Oppoent oppoent = new Oppoent();
-        Game game = new Game(oppoent);
+        Opponent opponent = new Opponent();
+        Game game = new Game(opponent);
         while (state.equals(START_GAME)) {
             game.initialiser();
             game.gamePlay();

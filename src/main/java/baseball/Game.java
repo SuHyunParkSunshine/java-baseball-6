@@ -3,24 +3,24 @@ package baseball;
 import java.util.Arrays;
 import java.util.List;
 
-import static baseball.Utils.*;
+import static baseball.utils.Constants.*;
 import static camp.nextstep.edu.missionutils.Console.readLine;
 
 
 public class Game {
 //    private final String winMessage = Messages.WIN_MESSAGE;
-    private final Oppoent oppoent;
+    private final Opponent opponent;
     private int strike;
     private int ball;
 
-    public Game(Oppoent oppoent){
-        this.oppoent = oppoent;
+    public Game(Opponent opponent){
+        this.opponent = opponent;
         this.strike = 0;
         this.ball = 0;
     }
 
     public void initialiser() {
-        oppoent.initialiser();
+        opponent.initialiser();
         strike = 0;
         ball = 0;
     }
@@ -36,8 +36,8 @@ public class Game {
             validateCount(userNumbers);
             validateRange(userNumbers);
 
-            strike = oppoent.checkStrike(userNumbers);
-            ball = oppoent.checkBall(userNumbers);
+            strike = opponent.checkStrike(userNumbers);
+            ball = opponent.checkBall(userNumbers);
 
             printHint();
         }
